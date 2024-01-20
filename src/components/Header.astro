@@ -1,0 +1,46 @@
+---
+
+---
+
+<header>
+    <nav id="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<style>
+    header {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        background-color: var(--terciary-bg-color);
+        color: #fff;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 40px;
+    }
+
+    #menu a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    #menu a:hover {
+        color: var(--primary-accent-color);
+    }
+</style>
