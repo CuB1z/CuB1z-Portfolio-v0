@@ -1,5 +1,7 @@
 ---
 import LinkIcon from "./LinkIcon.astro"
+
+const year = new Date().getFullYear()
 ---
 
 <footer>
@@ -8,7 +10,7 @@ import LinkIcon from "./LinkIcon.astro"
         <LinkIcon title="Twitter" url="https://twitter.com/CuB1zdev" img="/icons/twitter.svg" />
         <LinkIcon title="LinkedIn" url="https://www.linkedin.com/in/cub1z/" img="/icons/linkedIn.svg" />
     </div>
-    <p>© 2024 ❤️ by CuB1z</p>
+    <p>© {year} ❤️ by CuB1z</p>
 </footer>
 
 <style>
