@@ -3,32 +3,59 @@ const actualDate = new Date()
 const age = actualDate.getMonth() > 6 ? actualDate.getFullYear() - 2004 : actualDate.getFullYear() - 2005
 ---
 
-<section id="about">
+<section id="home">
     <h1>Hey, I am CuB1</h1>
     <h2>a <span id="ocupation">Software Engineering Student</span></h2>
     <p>
         <span id="age">{age} year old student.</span>
+        <br>
+        <span id="education">Universidad Rey Juan Carlos.</span>
         <span id="location">Madrid, Spain.</span>
-        <span id="education">Universidad Rey Juan Carlos.</spanid>
     </p>
 </section>
 
 <style>
-    #about {
+    #home {
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        height: 100vh;
-        color: white;
+        letter-spacing: 1px;
     }
 
     h1 {
+        width: 100%;
         font-size: 5em;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 3rem;
+    }
+
+    p {
+        width: 85%;
+        font-size: 1.2em;
         font-weight: 500;
+        line-height: 1.5em;
     }
 
     #ocupation {
         color: var(--secondary-text-color);
+    }
+
+    #age {
+        color: var(--yellow-text-color);
+    }
+    
+    #location {
+        color: #d1e8ef;
+    }
+    
+    #education {
+        margin-right: 15px;
+        color: #a0b6c4;
     }
 </style>
