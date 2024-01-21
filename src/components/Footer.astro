@@ -1,0 +1,34 @@
+---
+import LinkIcon from "./LinkIcon.astro"
+---
+
+<footer>
+    <div id="socials">
+        <LinkIcon title="Github" url="https://github.com/CuB1z" img="/icons/github.svg" />
+        <LinkIcon title="Twitter" url="https://twitter.com/CuB1zdev" img="/icons/twitter.svg" />
+        <LinkIcon title="LinkedIn" url="https://www.linkedin.com/in/cub1z/" img="/icons/linkedIn.svg" />
+    </div>
+    <p>© 2024 ❤️ by CuB1z</p>
+</footer>
+
+<style>
+    footer {
+        width: 100%;
+        min-height: 150px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: var(--primary-bg-color);
+    }
+
+    #socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+</style>
