@@ -1,0 +1,25 @@
+
+<section id="projects">
+    <h1>My projects</h1>
+    <div id="projects--container">
+        <slot />
+    </div>
+</section>
+
+<style>
+    #projects {
+        min-height: 100vh;
+        width: 60%;
+    }
+
+    #projects h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #projects--container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+</style>

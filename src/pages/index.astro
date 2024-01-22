@@ -2,9 +2,27 @@
 import Layout from '../layouts/Layout.astro'
 import Home from '../components/Home.astro'
 import About from '../components/About.astro'
+import Projects from '../components/Projects.astro'
+import ProjectCard from '../components/ProjectCard.astro'
 ---
 
 <Layout title="CuB1 | Portfolio">
 	<Home />
 	<About />
+	<Projects>
+		<ProjectCard
+			title="The 8 Ball Brand"
+			description="Auction site developed for a University project using Express and Node.js, where users can bid on items and sell their own. The site uses a local database to store user information and items for sale."
+			image="/assets/8ball-cover.svg"
+			link="https://github.com/PortiESP/The8BallBrand"
+			tags={["Express", "Node", "JavaScript", "HTML", "CSS"]}
+		/>
+		<ProjectCard
+			title="Monopoly Bank Application"
+			description=""
+			image=""
+			link="https://github.com/CuB1z/MonopolyBank"
+			tags={["Java", "XML"]}
+		/>
+	</Projects>
 </Layout>

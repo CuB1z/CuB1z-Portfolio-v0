@@ -1,0 +1,107 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+    tags: string[];
+}
+
+const { title, description, image, link, tags } = Astro.props
+---
+
+<div id="project--card">
+    <h2 id="project--title">{title}</h2>
+    <div id="project--tags">
+        {tags.map(tag => <span class="project--tag" style={`background-color: var(--${tag}-Color)`}>{tag}</span>)}
+    </div>
+    <p id="project--description">{description}</p>
+    <div id="project--content">
+        <img id="project--image" src={image} alt={title}>
+        <a id="project--link" href={link}>
+            <img src="/icons/github.svg" alt="Github Icon">
+            <span>Code</span>
+        </a>
+    </div>
+</div>
+
+<style>
+    #project--card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    #project--title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--terciary-text-color);
+    }
+
+    #project--tags {
+        display: flex;
+        gap: 10px;
+    }
+
+    #project--description {
+        font-size: 1.1rem;
+        font-weight: 500;
+        word-spacing: 1px;
+        color: var(--secondary-text-color);
+    }
+
+    .project--tag {
+        padding: 1px 10px 2px 10px;
+        border-radius: 0.5rem;
+        font-size: 0.70rem;
+        font-weight: bold;
+        color: var(--primary-text-color);
+        box-shadow: 0 0 10px #0000002b;
+    }
+
+    #project--content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: var(--secondary-bg-color);
+        box-shadow: 0 0 2px #0000002b;
+    }
+    
+    #project--image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+    }
+
+    #project--link {
+        width: 100px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--primary-bg-color);
+        color: var(--primary-text-color);
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+    #project--link img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #project--link:hover {
+        background-color: var(--secondary-accent-color);
+    }
+</style>
