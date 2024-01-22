@@ -7,20 +7,36 @@
     <div id="about--container">
         <div id="text-content">
             <p>My name is <strong>Diego Sánchez</strong></p>
-            <p>I am currently studying <strong>Software Engineering</strong> at <strong>Rey Juan Carlos University</strong> in Madrid.</p>
-            <p>I consider myself a <strong>responsible</strong> and <strong>committed</strong> person in my work.</p>
-            <p>In addition to my degree, I enjoy <strong>self-learning</strong> and <strong>experimenting</strong> with new technologies to expand my knowledge.</p>
+            <p>
+                I am currently studying <strong>Software Engineering</strong> at
+                <strong>Rey Juan Carlos University</strong> in Madrid.
+            </p>
+            <p>
+                I consider myself a <strong>responsible</strong> and <strong
+                    >committed</strong
+                > person in my work.
+            </p>
+            <p>
+                In addition to my degree, I enjoy <strong>self-learning</strong>
+                and <strong>experimenting</strong> with new technologies to expand
+                my knowledge.
+            </p>
         </div>
         <div id="img--div">
-            <img id="profile--img" src="/assets/Me.jpeg" alt="CuB1 profile picture">
+            <img
+                id="profile--img"
+                src="/assets/Me.jpeg"
+                alt="CuB1 profile picture"
+            />
         </div>
     </div>
 </section>
 
 <style>
     #about {
-        min-height: 80vh;
-        width: 60%;
+        min-height: 75vh;
+        width: 100%;
+        margin-bottom: 5rem;
     }
 
     #about h1 {
@@ -40,16 +56,24 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap: ;
+        gap: 2rem;
     }
 
     #profile--img {
         width: 200px;
         height: 200px;
         border-radius: 50%;
+        box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
     }
 
     strong {
         color: var(--yellow-text-color);
+    }
+
+    @media (max-width: 800px) {
+        #about--container {
+            flex-direction: column-reverse;
+            gap: 3rem;
+        }
     }
 </style>

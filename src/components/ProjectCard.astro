@@ -2,24 +2,37 @@
 interface Props {
     title: string;
     description: string;
+    shortDescription: string;
     image: string;
     link: string;
     tags: string[];
 }
 
-const { title, description, image, link, tags } = Astro.props
+const { title, description, shortDescription, image, link, tags } = Astro.props;
 ---
 
 <div id="project--card">
     <h2 id="project--title">{title}</h2>
     <div id="project--tags">
-        {tags.map(tag => <span class="project--tag" style={`background-color: var(--${tag}-Color)`}>{tag}</span>)}
+        {
+            tags.map((tag) => (
+                <span
+                    class="project--tag"
+                    style={`background-color: var(--${tag}-Color)`}
+                >
+                    {tag}
+                </span>
+            ))
+        }
     </div>
-    <p id="project--description">{description}</p>
+    <p class="project--description" id="project--description">{description}</p>
+    <p class="project--description" id="project--short-description">
+        {shortDescription}
+    </p>
     <div id="project--content">
-        <img id="project--image" src={image} alt={title}>
-        <a id="project--link" href={link}>
-            <img src="/icons/github.svg" alt="Github Icon">
+        <img id="project--image" src={image} alt={title} />
+        <a id="project--link" href={link} target="_blank">
+            <img src="/icons/github.svg" alt="Github Icon" />
             <span>Code</span>
         </a>
     </div>
@@ -30,7 +43,7 @@ const { title, description, image, link, tags } = Astro.props
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         padding: 0.5rem;
     }
 
@@ -45,17 +58,23 @@ const { title, description, image, link, tags } = Astro.props
         gap: 10px;
     }
 
-    #project--description {
+    .project--description {
         font-size: 1.1rem;
         font-weight: 500;
         word-spacing: 1px;
-        color: var(--secondary-text-color);
+        letter-spacing: 1px;
+        line-height: 30px;
+        color: var(--primary-text-color);
+    }
+
+    #project--short-description {
+        display: none;
     }
 
     .project--tag {
         padding: 1px 10px 2px 10px;
         border-radius: 0.5rem;
-        font-size: 0.70rem;
+        font-size: 0.7rem;
         font-weight: bold;
         color: var(--primary-text-color);
         box-shadow: 0 0 10px #0000002b;
@@ -72,7 +91,7 @@ const { title, description, image, link, tags } = Astro.props
         background-color: var(--secondary-bg-color);
         box-shadow: 0 0 2px #0000002b;
     }
-    
+
     #project--image {
         width: 100%;
         height: 100%;
@@ -103,5 +122,15 @@ const { title, description, image, link, tags } = Astro.props
 
     #project--link:hover {
         background-color: var(--secondary-accent-color);
+    }
+
+    @media (max-width: 800px) {
+        #project--short-description {
+            display: block;
+        }
+
+        #project--description {
+            display: none;
+        }
     }
 </style>
