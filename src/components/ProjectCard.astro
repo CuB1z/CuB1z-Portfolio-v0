@@ -100,14 +100,12 @@ const { title, description, shortDescription, image, link, tags } = Astro.props;
     }
 
     #project--link {
-        width: 100px;
-        height: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
-        padding: 1rem;
-        border-radius: 0.5rem;
+        padding: 4px 25px 5px 25px;
+        border-radius: 10px;
         background-color: var(--primary-bg-color);
         color: var(--primary-text-color);
         font-size: 1.1rem;
@@ -122,6 +120,7 @@ const { title, description, shortDescription, image, link, tags } = Astro.props;
 
     #project--link:hover {
         background-color: var(--secondary-accent-color);
+        transform: scale(1.05);
     }
 
     @media (max-width: 800px) {
