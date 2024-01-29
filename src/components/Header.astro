@@ -1,11 +1,14 @@
-
 <header>
     <nav id="menu">
-        <a href="https://www.linkedin.com/in/cub1z/" target="_blank"><img src="/icons/linkedIn.svg" alt="LinkedIn Icon"></a>
+        <a class="social" href="https://www.linkedin.com/in/cub1z/" target="_blank">
+            <img src="/icons/linkedIn.svg" alt="LinkedIn Icon" />
+        </a>
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
-        <a href="https://github.com/CuB1z" target="_blank"><img src="/icons/github.svg" alt="Github Icon"></a>
+        <a class="social" href="https://github.com/CuB1z" target="_blank">
+            <img src="/icons/github.svg" alt="Github Icon" />
+        </a>
     </nav>
 </header>
 
@@ -21,7 +24,7 @@
         align-items: center;
         z-index: 10;
     }
-    
+
     #menu {
         height: 40px;
         display: flex;
@@ -55,5 +58,15 @@
     #menu a:hover {
         background-color: rgba(0, 0, 0, 0.1);
         color: var(--primary-accent-color);
+    }
+
+    @media (max-width: 500px) {
+        #menu {
+            gap: 5px;
+            padding: 2px 10px;
+        }
+        #menu .social {
+            display: none;
+        }
     }
 </style>
