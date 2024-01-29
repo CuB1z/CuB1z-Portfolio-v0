@@ -30,6 +30,35 @@
             />
         </div>
     </div>
+    <div id="links-container">
+        <a
+            class="link"
+            href="https://github.com/CuB1z"
+            target="_blank"
+            style="background-color: var(--GitHub-bg-color)"
+        >
+            <img src="/icons/github.svg" alt="Github Logo" />
+            <span>Github</span>
+        </a>
+        <a
+            class="link"
+            href="https://www.linkedin.com/in/cub1z/"
+            target="_blank"
+            style="background-color: var(--LinkedIn-bg-color)"
+        >
+            <img src="/icons/linkedIn.svg" alt="Linkedin Logo" />
+            <span>LinkedIn</span>
+        </a>
+        <a
+            class="link"
+            href="mailto:cub1zdev@gmail.com"
+            target="_blank"
+            style="background-color: var(--Email-bg-color)"
+        >
+            <img src="/icons/email.svg" alt="Email Logo" />
+            <span style="color: var(--dark-text-color)">cub1zdev@gmail.com</span>
+        </a>
+    </div>
 </section>
 
 <style>
@@ -67,17 +96,70 @@
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
     }
 
     strong {
         color: var(--yellow-text-color);
     }
 
+    #links-container {
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    #links-container .link img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 10px 4px 10px;
+        border-radius: 15px;
+        color: var(--dark-text-color);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    @media (max-width: 500px) {
+        #about h1 {
+            font-size: 2rem;
+        }
+
+        #about p {
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        #about--container {
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        #links-container {
+            margin-top: 2rem;
+        }
+    }
+
     @media (max-width: 800px) {
         #about--container {
             flex-direction: column-reverse;
             gap: 3rem;
+        }
+
+        #about--container #text-content {
+            width: 90%;
+            padding-left: 15px;
         }
     }
 </style>
