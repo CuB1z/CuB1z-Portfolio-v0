@@ -31,7 +31,7 @@ const { title, description, shortDescription, image, link, tags } = Astro.props;
     </p>
     <div id="project--content">
         <img id="project--image" src={image} alt={title} />
-        <a id="project--link" href={link} target="_blank">
+        <a class="project--link" href={link} target="_blank">
             <img src="/icons/github.svg" alt="Github Icon" />
             <span>Code</span>
         </a>
@@ -100,7 +100,7 @@ const { title, description, shortDescription, image, link, tags } = Astro.props;
         border-radius: 0.5rem;
     }
 
-    #project--link {
+    .project--link {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -114,12 +114,12 @@ const { title, description, shortDescription, image, link, tags } = Astro.props;
         text-decoration: none;
         transition: all 0.2s ease;
     }
-    #project--link img {
+    .project--link img {
         width: 20px;
         height: 20px;
     }
 
-    #project--link:hover {
+    .project--link:hover {
         background-color: var(--secondary-accent-color);
         transform: scale(1.05);
     }
