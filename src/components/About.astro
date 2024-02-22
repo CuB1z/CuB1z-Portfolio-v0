@@ -1,5 +1,5 @@
 ---
-
+import SocialButton from './SocialButton.astro'
 ---
 
 <section id="about">
@@ -31,33 +31,24 @@
         </div>
     </div>
     <div id="links-container">
-        <a
-            class="link"
-            href="https://github.com/CuB1z"
-            target="_blank"
-            style="background-color: var(--GitHub-bg-color)"
-        >
-            <img src="/icons/github.svg" alt="Github Logo" />
-            <span>Github</span>
-        </a>
-        <a
-            class="link"
-            href="https://www.linkedin.com/in/cub1z/"
-            target="_blank"
-            style="background-color: var(--LinkedIn-bg-color)"
-        >
-            <img src="/icons/linkedIn.svg" alt="Linkedin Logo" />
-            <span>LinkedIn</span>
-        </a>
-        <a
-            class="link"
-            href="mailto:cub1zdev@gmail.com"
-            target="_blank"
-            style="background-color: var(--Email-bg-color)"
-        >
-            <img src="/icons/email.svg" alt="Email Logo" />
-            <span style="color: var(--dark-text-color)">cub1zdev@gmail.com</span>
-        </a>
+        <SocialButton
+            title="GitHub"
+            url="https://github.com/CuB1z"
+            reference="GitHub"
+            textColor="var(--primary-text-color)"
+        />
+        <SocialButton
+            title="LinkedIn"
+            url="https://www.linkedin.com/in/cub1z/"
+            reference="LinkedIn"
+            textColor="var(--primary-text-color)"
+        />
+        <SocialButton
+            title="cub1zdev@gmail.com"
+            url="mailto:cub1zdev@gmail.com"
+            reference="Email"
+            textColor="var(--dark-text-color)"
+        />
     </div>
 </section>
 

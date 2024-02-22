@@ -1,0 +1,48 @@
+---
+interface Props {
+    title: string;
+    url: string;
+    reference: string;
+    textColor: string;
+}
+
+const { title, url, reference, textColor } = Astro.props;
+---
+
+<a
+    href={url}
+    target="_blank"
+    style=`background-color: var(--${reference}-bg-color);`
+>
+    <img src=`/icons/${reference}.svg` alt=`${title} icon` />
+    <span style=`color: ${textColor};`>
+        {title}
+    </span>
+</a>
+
+<style>
+    a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 10px 4px 10px;
+        border-radius: 15px;
+        color: var(--dark-text-color);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+    }
+
+    a:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 15px #c3e7e75d;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+</style>
