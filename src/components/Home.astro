@@ -1,4 +1,7 @@
 ---
+
+import DownloadFile from './DownloadFile.astro'
+
 const actualDate = new Date()
 const age = actualDate.getMonth() > 6 ? actualDate.getFullYear() - 2004 : actualDate.getFullYear() - 2005
 ---
@@ -12,6 +15,10 @@ const age = actualDate.getMonth() > 6 ? actualDate.getFullYear() - 2004 : actual
         <span id="education">Rey Juan Carlos University.</span>
         <span id="location">Madrid, Spain.</span>
     </p>
+    <DownloadFile
+        title="CV"
+        path="/Diego_Sanchez_CV.pdf"
+    />
 </section>
 
 <style>
