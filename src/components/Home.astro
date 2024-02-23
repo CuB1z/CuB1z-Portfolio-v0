@@ -1,24 +1,25 @@
 ---
+import DownloadFileButton from "./DownloadFileButton.astro";
 
-import DownloadFile from './DownloadFile.astro'
-
-const actualDate = new Date()
-const age = actualDate.getMonth() > 6 ? actualDate.getFullYear() - 2004 : actualDate.getFullYear() - 2005
+const actualDate = new Date();
+const age =
+    actualDate.getMonth() > 6
+        ? actualDate.getFullYear() - 2004
+        : actualDate.getFullYear() - 2005;
 ---
 
 <section id="home">
-    <h1>Hey, I am CuB1</h1>
-    <h2>a <span id="ocupation">Software Engineering Student</span></h2>
-    <p>
-        <span id="age">{age} year old student.</span>
-        <br>
-        <span id="education">Rey Juan Carlos University.</span>
-        <span id="location">Madrid, Spain.</span>
-    </p>
-    <DownloadFile
-        title="CV"
-        path="/Diego_Sanchez_CV.pdf"
-    />
+    <div class="text-data">
+        <h1>Hey, I am CuB1</h1>
+        <h2>a <span id="ocupation">Software Engineering Student</span></h2>
+        <p>
+            <span id="age">{age} year old student.</span>
+            <br />
+            <span id="education">Rey Juan Carlos University.</span>
+            <span id="location">Madrid, Spain.</span>
+        </p>
+    </div>
+    <DownloadFileButton title="CV" path="/Diego_Sanchez_CV.pdf" />
 </section>
 
 <style>
@@ -29,6 +30,7 @@ const age = actualDate.getMonth() > 6 ? actualDate.getFullYear() - 2004 : actual
         align-items: flex-start;
         justify-content: center;
         letter-spacing: 1px;
+        gap: 2rem;
     }
 
     h1 {
@@ -56,11 +58,11 @@ const age = actualDate.getMonth() > 6 ? actualDate.getFullYear() - 2004 : actual
     #age {
         color: var(--yellow-text-color);
     }
-    
+
     #location {
         color: #d1e8ef;
     }
-    
+
     #education {
         margin-right: 15px;
         color: #a0b6c4;
