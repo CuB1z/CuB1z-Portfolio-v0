@@ -1,0 +1,40 @@
+---
+interface Props {
+    title: string;
+    path: string;
+}
+
+const { title, path } = Astro.props;
+---
+
+<button data-file-path={path}>Download {title}</button>
+
+<script>
+    document.querySelector("button").addEventListener("click", function () {
+        const filePath = this.getAttribute("data-file-path")
+        const link = document.createElement("a")
+        link.href = filePath
+        link.download = filePath
+        link.click()
+    })
+</script>
+
+<style>
+    button {
+        padding: 5px 10px;
+        background-color: #0070f3;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0053b3;
+    }
+    button:active {
+        background-color: #00449e;
+    }
+    button:focus {
+        outline: none;
+    }
+</style>
