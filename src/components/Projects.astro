@@ -1,6 +1,11 @@
+---
+import getLanguage from "../languages/script";
+
+const language = getLanguage(Astro.currentLocale)
+---
 
 <section id="projects">
-    <h1>Projects</h1>
+    <h1>{language.PROJECTS_TITLE}</h1>
     <div id="projects--container">
         <slot />
     </div>

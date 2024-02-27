@@ -1,4 +1,6 @@
 {
+    "PROJECTS_TITLE": "Projects",
+
     "THE_8BALL_DESCRIPTION": "Auction site developed for a University project using Express and Node.js, where users can bid on items and sell their own. The site uses a local database to store user information and items for sale.",
     "THE_8BALL_SHORT_DESCRIPTION": "Auction site developed for a University project using Express and Node.js.",
     "MONOPOLY_DESCRIPTION": "Terminal based Monopoly Bank Application developed for a University project using Java. The application allows users to play different games of Monopoly and keep track of their money.",
