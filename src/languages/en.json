@@ -1,0 +1,28 @@
+{
+    "THE_8BALL_DESCRIPTION": "Auction site developed for a University project using Express and Node.js, where users can bid on items and sell their own. The site uses a local database to store user information and items for sale.",
+    "THE_8BALL_SHORT_DESCRIPTION": "Auction site developed for a University project using Express and Node.js.",
+    "MONOPOLY_DESCRIPTION": "Terminal based Monopoly Bank Application developed for a University project using Java. The application allows users to play different games of Monopoly and keep track of their money.",
+    "MONOPOLY_SHORT_DESCRIPTION": "Terminal based Monopoly Bank Application developed for a University project using Java.",
+
+    "ABOUT_TITLE": "About Me",
+    "ABOUT_TEXT_1_1": "My name is",
+    "ABOUT_TEXT_1_STRONG_1": "Diego Sánchez",
+
+    "ABOUT_TEXT_2_1": "I am currently studying",
+    "ABOUT_TEXT_2_2": "at",
+    "ABOUT_TEXT_2_3": "in Madrid.",
+    "ABOUT_TEXT_2_STRONG_1": "Software Engineering",
+    "ABOUT_TEXT_2_STRONG_2": "Rey Juan Carlos University",
+
+    "ABOUT_TEXT_3_1": "I consider myself a",
+    "ABOUT_TEXT_3_2": "and",
+    "ABOUT_TEXT_3_3": "person in my work.",
+    "ABOUT_TEXT_3_STRONG_1": "responsible",
+    "ABOUT_TEXT_3_STRONG_2": "committed",
+    
+    "ABOUT_TEXT_4_1": "In addition to my degree, I enjoy",
+    "ABOUT_TEXT_4_2": "and",
+    "ABOUT_TEXT_4_3": "with new technologies to expand my knowledge.",
+    "ABOUT_TEXT_4_STRONG_1": "self-learning",
+    "ABOUT_TEXT_4_STRONG_2": "experimenting"
+}

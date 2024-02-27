@@ -1,25 +1,39 @@
 ---
-import SocialButton from './SocialButton.astro'
+import SocialButton from "./SocialButton.astro";
+
+import getLanguage from "../languages/script.js";
+
+const language = getLanguage(Astro.currentLocale);
 ---
 
 <section id="about">
     <h1>About me</h1>
     <div id="about--container">
         <div id="text-content">
-            <p>My name is <strong>Diego Sánchez</strong></p>
             <p>
-                I am currently studying <strong>Software Engineering</strong> at
-                <strong>Rey Juan Carlos University</strong> in Madrid.
+                {language.ABOUT_TEXT_1_1}
+                <strong>{language.ABOUT_TEXT_1_STRONG_1}</strong>
             </p>
             <p>
-                I consider myself a <strong>responsible</strong> and <strong
-                    >committed</strong
-                > person in my work.
+                {language.ABOUT_TEXT_2_1}
+                <strong>{language.ABOUT_TEXT_2_STRONG_1}</strong>
+                {language.ABOUT_TEXT_2_2}
+                <strong>{language.ABOUT_TEXT_2_STRONG_2}</strong>
+                {language.ABOUT_TEXT_2_3}
             </p>
             <p>
-                In addition to my degree, I enjoy <strong>self-learning</strong>
-                and <strong>experimenting</strong> with new technologies to expand
-                my knowledge.
+                {language.ABOUT_TEXT_3_1}
+                <strong>{language.ABOUT_TEXT_3_STRONG_1}</strong>
+                {language.ABOUT_TEXT_3_2}
+                <strong>{language.ABOUT_TEXT_3_STRONG_2}</strong>
+                {language.ABOUT_TEXT_3_3}
+            </p>
+            <p>
+                {language.ABOUT_TEXT_4_1}
+                <strong>{language.ABOUT_TEXT_4_STRONG_1}</strong>
+                {language.ABOUT_TEXT_4_2}
+                <strong>{language.ABOUT_TEXT_4_STRONG_2}</strong>
+                {language.ABOUT_TEXT_4_3}
             </p>
         </div>
         <div id="img--div">

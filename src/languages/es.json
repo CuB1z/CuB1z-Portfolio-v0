@@ -1,0 +1,28 @@
+{
+    "THE_8BALL_DESCRIPTION": "Sitio de subastas desarrollado para un proyecto universitario utilizando Express y Node.js, donde los usuarios pueden hacer ofertas en artículos y vender los suyos propios. El sitio utiliza una base de datos local para almacenar la información de los usuarios y los artículos en venta.",
+    "THE_8BALL_SHORT_DESCRIPTION": "Sitio de subastas desarrollado para un proyecto universitario utilizando Express y Node.js.",
+    "MONOPOLY_DESCRIPTION": "Aplicación de Monopoly basada en terminal desarrollada para un proyecto universitario utilizando Java. La aplicación permite a los usuarios jugar diferentes partidas de Monopoly y llevar un registro de su dinero.",
+    "MONOPOLY_SHORT_DESCRIPTION": "Aplicación de Monopoly basada en terminal desarrollada para un proyecto universitario utilizando Java.",
+
+    "ABOUT_TITLE": "Sobre mí",
+    "ABOUT_TEXT_1_1": "Mi nombre es",
+    "ABOUT_TEXT_1_STRONG_1": "Diego Sánchez",
+
+    "ABOUT_TEXT_2_1": "Actualmente estoy estudiando",
+    "ABOUT_TEXT_2_2": "en",
+    "ABOUT_TEXT_2_3": "en Madrid.",
+    "ABOUT_TEXT_2_STRONG_1": "Ingeniería de Software",
+    "ABOUT_TEXT_2_STRONG_2": "Universidad Rey Juan Carlos",
+
+    "ABOUT_TEXT_3_1": "Me considero una persona",
+    "ABOUT_TEXT_3_2": "y",
+    "ABOUT_TEXT_3_3": "en mi trabajo.",
+    "ABOUT_TEXT_3_STRONG_1": "responsable",
+    "ABOUT_TEXT_3_STRONG_2": "comprometida",
+    
+    "ABOUT_TEXT_4_1": "Además de mi carrera, disfruto",
+    "ABOUT_TEXT_4_2": "y",
+    "ABOUT_TEXT_4_3": "con nuevas tecnologías para ampliar mis conocimientos.",
+    "ABOUT_TEXT_4_STRONG_1": "autoaprendizaje",
+    "ABOUT_TEXT_4_STRONG_2": "experimentando"
+}
