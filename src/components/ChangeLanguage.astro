@@ -1,0 +1,46 @@
+---
+import { getActualLanguage, getAlternativeLanguage } from "../languages/script";
+
+const language = getActualLanguage(Astro.currentLocale);
+const alternativeLanguage = getAlternativeLanguage(Astro.currentLocale);
+
+// Get actual page path
+const urlPath = Astro.url.href
+console.log(Astro.url)
+console.log(urlPath)
+---
+
+<a href=`/${alternativeLanguage}`>
+    <img src=`/assets/${language}.svg` alt=`${language} flag`>
+</a>
+
+<style>
+    a {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--secondary-bg-color);
+        box-shadow: 0 0 10px var(--secondary-accent-color);
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    a:hover {
+        transform:translateY(-5px);
+        box-shadow: 0 0 20px var(--primary-accent-color);
+    }
+
+    a img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+    }
+
+</style>
