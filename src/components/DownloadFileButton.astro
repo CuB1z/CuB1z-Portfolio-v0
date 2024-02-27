@@ -1,13 +1,16 @@
 ---
+import getLanguage from '../languages/script';
+
 interface Props {
     title: string;
     path: string;
 }
 
 const { title, path } = Astro.props;
+const language = getLanguage(Astro.currentLocale);
 ---
 
-<button data-file-path={path}>Download {title}</button>
+<button data-file-path={path}>{language.DOWNLOAD_TITLE} {title}</button>
 
 <script>
     document.querySelector("button").addEventListener("click", function () {

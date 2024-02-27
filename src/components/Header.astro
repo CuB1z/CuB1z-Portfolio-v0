@@ -1,9 +1,15 @@
+---
+import getLanguage from "../languages/script"
+
+const language = getLanguage(Astro.currentLocale)
+---
+
 <header>
     <nav id="menu">
         <img src="/favicon.svg" alt="CuB1's logo">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
+        <a href="#home">{language.HOME_TITLE}</a>
+        <a href="#projects">{language.PROJECTS_TITLE}</a>
+        <a href="#about">{language.ABOUT_TITLE}</a>
     </nav>
 </header>
 

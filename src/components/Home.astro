@@ -1,6 +1,10 @@
 ---
 import DownloadFileButton from "./DownloadFileButton.astro";
 
+import getLanguage from "../languages/script";
+
+const language = getLanguage(Astro.currentLocale);
+
 const actualDate = new Date();
 const age =
     actualDate.getMonth() > 6
@@ -10,13 +14,13 @@ const age =
 
 <section id="home">
     <div class="text-data">
-        <h1>Hey, I am CuB1</h1>
-        <h2>a <span id="ocupation">Software Engineering Student</span></h2>
+        <h1>{language.HOME_TEXT_1}</h1>
+        <h2>{language.HOME_TEXT_2} <span id="ocupation">{language.HOME_TEXT_3}</span></h2>
         <p>
-            <span id="age">{age} year old student.</span>
+            <span id="age">{age} {language.HOME_TEXT_4}</span>
             <br />
-            <span id="education">Rey Juan Carlos University.</span>
-            <span id="location">Madrid, Spain.</span>
+            <span id="education">{language.HOME_TEXT_5}</span>
+            <span id="location">{language.HOME_TEXT_6}</span>
         </p>
     </div>
     <DownloadFileButton title="CV" path="/Diego_Sanchez_CV.pdf" />

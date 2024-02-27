@@ -1,6 +1,15 @@
 {
-    "PROJECTS_TITLE": "Proyectos",
+    "DOWNLOAD_TITLE": "Descargar",
 
+    "HOME_TITLE": "Inicio",
+    "HOME_TEXT_1": "Hey, soy CuB1",
+    "HOME_TEXT_2": "un",
+    "HOME_TEXT_3": "Estudiante de Ingeniería Software",
+    "HOME_TEXT_4": "años de edad",
+    "HOME_TEXT_5": "Universidad Rey Juan Carlos.",
+    "HOME_TEXT_6": "Madrid, España.",
+
+    "PROJECTS_TITLE": "Proyectos",
     "THE_8BALL_DESCRIPTION": "Sitio de subastas desarrollado para un proyecto universitario utilizando Express y Node.js, donde los usuarios pueden hacer ofertas por artículos y vender los suyos propios. El sitio utiliza una base de datos local para almacenar la información de los usuarios y los artículos en venta.",
     "THE_8BALL_SHORT_DESCRIPTION": "Sitio de subastas desarrollado para un proyecto universitario utilizando Express y Node.js.",
     "MONOPOLY_DESCRIPTION": "Aplicación de Monopoly, basada en la terminal, desarrollada para un proyecto universitario utilizando Java. La aplicación permite a los usuarios jugar diferentes partidas de Monopoly y llevar un registro de su dinero.",
