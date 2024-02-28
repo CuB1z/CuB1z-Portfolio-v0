@@ -1,4 +1,6 @@
 ---
+import ToggleThemeIcon from "./ToggleThemeIcon.astro"
+
 import getLanguage from "../languages/script"
 
 const language = getLanguage(Astro.currentLocale)
@@ -10,6 +12,7 @@ const language = getLanguage(Astro.currentLocale)
         <a href="#home">{language.HOME_TITLE}</a>
         <a href="#projects">{language.PROJECTS_TITLE}</a>
         <a href="#about">{language.ABOUT_TITLE}</a>
+        <ToggleThemeIcon />
     </nav>
 </header>
 

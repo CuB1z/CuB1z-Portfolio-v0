@@ -1,0 +1,23 @@
+
+<input id="theme-toggler" type="button" value="Theme">
+
+<style>
+    input {
+        padding: 2px 4px;
+        border: none;
+        background-color: white;
+        color:black;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    let darkMode = true
+
+    function toggleTheme(event) {
+        darkMode = !darkMode
+        document.body.classList.toggle('light', darkMode)
+    }
+
+    document.getElementById('theme-toggler').addEventListener('click', toggleTheme)
+</script>

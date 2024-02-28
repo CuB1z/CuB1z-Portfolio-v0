@@ -31,14 +31,17 @@ const { title } = Astro.props;
 
 <style is:global>
     :root {
-        color-scheme: dark;
-
         --primary-bg-color: #13151a;
         --secondary-bg-color: #22242a;
         --terciary-bg-color: #2b96b3;
 
+        --gradient-to-color: #000000;
+
         --nav-bg-color: #272a34;
         --footer-bg-color: #13151a;
+
+        --location-text-color: #d1e8ef;
+        --education-text-color: #a0b6c4;
 
         --primary-accent-color: #89b4d0;
         --secondary-accent-color: #080808;
@@ -65,7 +68,46 @@ const { title } = Astro.props;
         --Instagram-bg-color: #e1306c;
         --Discord-bg-color: #7289da;
         --Email-bg-color: #fff;
+    }
+
+    body.light {
+        --primary-bg-color: #000000;
+        --secondary-bg-color: #9bcfdd;
+        --terciary-bg-color: #2b96b3;
+
+        --gradient-to-color: #ffffff;
+
+        --nav-bg-color: #2b96b3;
+        --footer-bg-color: #494e5c;
+
+        --location-text-color: #0083ab;
+        --education-text-color: #17394e;
+
+        --primary-accent-color: #89b4d0;
+        --secondary-accent-color: #080808;
+
+        --primary-text-color: #000;
+        --dark-text-color: #000;
+        --secondary-text-color: #4b93c4;
+        --terciary-text-color: #fab005;
+        --yellow-text-color: #fa9805;
+        --red-text-color: #d04d4d;
+        --green-text-color: #c7ffda;
         
+        --JavaScript-Color: #d4b21b;
+        --HTML-Color: #e34c26;
+        --Java-Color: #e34c26;
+        --CSS-Color: #2965f1;
+        --Node-Color: #68a063;
+        --Express-Color: #0000009e;
+        --XML-Color: #f5985a;
+
+        --GitHub-bg-color: #181818;
+        --LinkedIn-bg-color: #608ea77e;
+        --Twitter-bg-color: #1da1f2;
+        --Instagram-bg-color: #e1306c;
+        --Discord-bg-color: #7289da;
+        --Email-bg-color: #fff;
     }
 
     * {
@@ -88,7 +130,7 @@ const { title } = Astro.props;
         background: radial-gradient(
             at center top,
             var(--secondary-bg-color) 0%,
-            #000 100%
+            var(--gradient-to-color) 100%
         );
     }
 
