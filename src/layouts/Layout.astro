@@ -35,6 +35,7 @@ const { title } = Astro.props;
         --secondary-bg-color: #22242a;
         --terciary-bg-color: #2b96b3;
 
+        --gradient-from-color: #22242a;
         --gradient-to-color: #000000;
 
         --nav-bg-color: #272a34;
@@ -47,6 +48,7 @@ const { title } = Astro.props;
         --secondary-accent-color: #080808;
 
         --primary-text-color: #fff;
+        --white-text-color: #fff;
         --dark-text-color: #000;
         --secondary-text-color: #97bcd5;
         --terciary-text-color: #ffd53d;
@@ -71,14 +73,15 @@ const { title } = Astro.props;
     }
 
     body.light {
-        --primary-bg-color: #000000;
-        --secondary-bg-color: #9bcfdd;
+        --primary-bg-color: #ffffff;
+        --secondary-bg-color: #eee;
         --terciary-bg-color: #2b96b3;
 
+        --gradient-from-color: #fff;
         --gradient-to-color: #ffffff;
 
         --nav-bg-color: #2b96b3;
-        --footer-bg-color: #494e5c;
+        --footer-bg-color: #cbcbcb;
 
         --location-text-color: #0083ab;
         --education-text-color: #17394e;
@@ -87,7 +90,8 @@ const { title } = Astro.props;
         --secondary-accent-color: #080808;
 
         --primary-text-color: #000;
-        --dark-text-color: #000;
+        --white-text-color: #fff;
+        --dark-text-color: #fff;
         --secondary-text-color: #4b93c4;
         --terciary-text-color: #fab005;
         --yellow-text-color: #fa9805;
@@ -103,11 +107,11 @@ const { title } = Astro.props;
         --XML-Color: #f5985a;
 
         --GitHub-bg-color: #181818;
-        --LinkedIn-bg-color: #608ea77e;
+        --LinkedIn-bg-color: #0076b2;
         --Twitter-bg-color: #1da1f2;
         --Instagram-bg-color: #e1306c;
         --Discord-bg-color: #7289da;
-        --Email-bg-color: #fff;
+        --Email-bg-color: #000;
     }
 
     * {
@@ -129,7 +133,7 @@ const { title } = Astro.props;
         background-color: #13151a;
         background: radial-gradient(
             at center top,
-            var(--secondary-bg-color) 0%,
+            var(--gradient-from-color) 0%,
             var(--gradient-to-color) 100%
         );
     }
