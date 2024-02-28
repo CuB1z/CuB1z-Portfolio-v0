@@ -3,11 +3,6 @@ import { getActualLanguage, getAlternativeLanguage } from "../languages/script";
 
 const language = getActualLanguage(Astro.currentLocale);
 const alternativeLanguage = getAlternativeLanguage(Astro.currentLocale);
-
-// Get actual page path
-const urlPath = Astro.url.href
-console.log(Astro.url)
-console.log(urlPath)
 ---
 
 <a href=`/${alternativeLanguage}`>
