@@ -1,22 +1,34 @@
 
-<input id="theme-toggler" type="button" value="Theme">
+<div id="theme-toggler">
+    <img id="theme-icon" src="/assets/moon.png" alt="Icon">
+</div>
 
 <style>
-    input {
-        padding: 2px 4px;
-        border: none;
-        background-color: white;
-        color:black;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 4px;
+        background-color: #eee;
+        border-radius: 50px;
         cursor: pointer;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
     }
 </style>
 
 <script>
     let darkMode = true
 
-    function toggleTheme(event) {
+    function toggleTheme() {
         darkMode = !darkMode
         document.body.classList.toggle('light', darkMode)
+
+        const themeIcon = document.getElementById('theme-icon') as HTMLImageElement;
+        themeIcon.src = darkMode ? '/assets/moon.png' : '/assets/sun.png';
     }
 
     document.getElementById('theme-toggler').addEventListener('click', toggleTheme)
