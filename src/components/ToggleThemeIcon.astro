@@ -1,6 +1,6 @@
 
 <div id="theme-toggler">
-    <img id="theme-icon" src="/assets/moon.png" alt="Icon">
+    <img id="theme-icon" src="" alt="Icon">
 </div>
 
 <style>
@@ -12,6 +12,11 @@
         background-color: #eee;
         border-radius: 50px;
         cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    div:hover {
+        transform: scale(1.05);
     }
 
     img {
@@ -21,15 +26,25 @@
 </style>
 
 <script>
-    let darkMode = true
+    let lightMode = false
 
     function toggleTheme() {
-        darkMode = !darkMode
-        document.body.classList.toggle('light', darkMode)
+        lightMode = !lightMode
+        document.body.classList.toggle('light', lightMode)
 
-        const themeIcon = document.getElementById('theme-icon') as HTMLImageElement;
-        themeIcon.src = darkMode ? '/assets/moon.png' : '/assets/sun.png';
+        const themeIcon = document.getElementById('theme-icon') as HTMLImageElement
+        themeIcon.src = lightMode ? '/assets/sun.png' : '/assets/moon.png'
     }
 
+    function setInitialTheme() {
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        lightMode = !prefersDarkScheme
+        document.body.classList.toggle('light', lightMode)
+
+        const themeIcon = document.getElementById('theme-icon') as HTMLImageElement
+        themeIcon.src = lightMode ? '/assets/sun.png' : '/assets/moon.png'
+    }
+
+    setInitialTheme()
     document.getElementById('theme-toggler').addEventListener('click', toggleTheme)
 </script>
