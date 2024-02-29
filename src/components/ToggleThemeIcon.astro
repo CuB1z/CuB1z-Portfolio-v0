@@ -25,14 +25,14 @@
     }
 </style>
 
-<script>
+<script async >
     let lightMode = false
 
     function toggleTheme() {
         lightMode = !lightMode
         document.body.classList.toggle('light', lightMode)
 
-        const themeIcon = document.getElementById('theme-icon') as HTMLImageElement
+        const themeIcon = document.getElementById('theme-icon')
         themeIcon.src = lightMode ? '/assets/sun.png' : '/assets/moon.png'
     }
 
@@ -41,7 +41,7 @@
         lightMode = !prefersDarkScheme
         document.body.classList.toggle('light', lightMode)
 
-        const themeIcon = document.getElementById('theme-icon') as HTMLImageElement
+        const themeIcon = document.getElementById('theme-icon')
         themeIcon.src = lightMode ? '/assets/sun.png' : '/assets/moon.png'
     }
 
