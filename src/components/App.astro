@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Home from "../components/Home.astro";
 import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import ProjectCard from "../components/ProjectCard.astro"
 
 import getLanguage from "../languages/script.js";
 
@@ -17,7 +17,7 @@ const language = getLanguage(Astro.currentLocale);
             title="The 8 Ball Brand"
             description={language.THE_8BALL_DESCRIPTION}
             shortDescription={language.THE_8BALL_SHORT_DESCRIPTION}
-            image="/assets/8ball-cover.svg"
+            image="/assets/8ball-cover.webp"
             link="https://github.com/PortiESP/The8BallBrand"
             tags={["Express", "Node", "JavaScript", "HTML", "CSS"]}
         />
@@ -25,7 +25,7 @@ const language = getLanguage(Astro.currentLocale);
             title="Monopoly Bank Application"
             description={language.MONOPOLY_DESCRIPTION}
             shortDescription={language.MONOPOLY_SHORT_DESCRIPTION}
-            image="/assets/monopolybank-cover.svg"
+            image="/assets/monopolybank-cover.webp"
             link="https://github.com/CuB1z/MonopolyBank"
             tags={["Java", "XML"]}
         />
