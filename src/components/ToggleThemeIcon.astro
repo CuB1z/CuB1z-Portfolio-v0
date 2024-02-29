@@ -25,26 +25,45 @@
     }
 </style>
 
-<script async >
-    let lightMode = false
+<script is:inline>
+    function setTheme(theme) {
+        localStorage.setItem('theme', theme)
+        document.body.classList.toggle('light', theme === 'light')
+    }
+
+    function setThemeIcon(theme) {
+        const themeIcon = document.getElementById('theme-icon')
+        themeIcon.src = theme === 'light' ? '/assets/sun.webp' : '/assets/moon.webp'
+    }
+
+    function toggleIcon() {
+        const themeIcon = document.getElementById('theme-icon')
+        themeIcon.src = themeIcon.src.includes('sun') ? '/assets/moon.webp' : '/assets/sun.webp'
+    }
+
+    function getSystemTheme() {
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        return prefersDarkScheme ? 'dark' : 'light'
+    }
+
+    function getUserDesiredTheme() {
+        const userDesiredTheme = localStorage.getItem('theme')
+
+        if (userDesiredTheme) return userDesiredTheme
+        else return getSystemTheme()
+    }
 
     function toggleTheme() {
-        lightMode = !lightMode
-        document.body.classList.toggle('light', lightMode)
-
-        const themeIcon = document.getElementById('theme-icon')
-        themeIcon.src = lightMode ? '/assets/sun.webp' : '/assets/moon.webp'
+        const theme = getUserDesiredTheme()
+        setTheme(theme === 'light' ? 'dark' : 'light')
+        toggleIcon()
     }
 
-    function setInitialTheme() {
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-        lightMode = !prefersDarkScheme
-        document.body.classList.toggle('light', lightMode)
+    // Set theme on load
+    const userTheme = getUserDesiredTheme()
+    setTheme(userTheme)
+    setThemeIcon(userTheme)
 
-        const themeIcon = document.getElementById('theme-icon')
-        themeIcon.src = lightMode ? '/assets/sun.webp' : '/assets/moon.webp'
-    }
-
-    setInitialTheme()
+    // Add event listener to the theme toggler
     document.getElementById('theme-toggler').addEventListener('click', toggleTheme)
 </script>
