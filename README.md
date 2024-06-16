@@ -18,8 +18,8 @@
 
 To run this project locally:
 
-1. 📦 **Clone the repo**: `git clone https://github.com/CuB1z/CuB1z-Portfolio.git`
-2. 🚀 **Enter the directory**: `cd CuB1z-Portfolio`
+1. 📦 **Clone the repo**: `git clone https://github.com/CuB1z/CuB1z-Portfolio-v0.git`
+2. 🚀 **Enter the directory**: `cd CuB1z-Portfolio-v0`
 3. 🧩 **Install dependencies**: `npm install`
 4. 🎉 **Start the server**: `npm run dev`
 
